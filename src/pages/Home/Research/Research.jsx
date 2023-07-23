@@ -1,3 +1,4 @@
+// import CustomScroll from 'react-custom-scroll'
 const Research = () => {
   const researchPapers = [
     { _id: 1, title: 'Research Paper 1', link: 'https://example.com/paper1' },
@@ -20,6 +21,7 @@ const Research = () => {
       <h2 className='my-4 text-3xl font-bold text-center'>
         Some Research Paper From Colleges
       </h2>
+
       <div className='overflow-x-auto border-4 h-96'>
         <table className='table table-pin-rows'>
           <tbody>

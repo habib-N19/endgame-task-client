@@ -6,6 +6,7 @@ import { Pagination, Navigation } from 'swiper/modules'
 import img1 from '../../../assets/clg1.jpg'
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+
 const Reviews = () => {
   return (
     <section className='w-9/12 h-screen mx-auto mt-12 bg-base-100'>
