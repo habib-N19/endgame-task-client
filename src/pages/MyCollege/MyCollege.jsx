@@ -1,6 +1,8 @@
-import React from 'react'
+//
 
 const MyCollege = () => {
+    // fetching data from hook
+    
   return <div></div>
 }
 
