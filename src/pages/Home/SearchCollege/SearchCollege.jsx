@@ -8,7 +8,7 @@ const SearchCollege = () => {
 
   return (
     <div className='w-full mr-auto text-right'>
-      <di className='relative mx-auto join'>
+      <div className='relative mx-auto join'>
         {showInput ? (
           <>
             <input
@@ -25,7 +25,7 @@ const SearchCollege = () => {
             Search
           </div>
         )}
-      </di>
+      </div>
       {/* so a component will be here of card  */}
     </div>
   )

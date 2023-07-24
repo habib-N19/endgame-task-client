@@ -4,6 +4,7 @@ import axios from 'axios'
 const useColleges = () => {
   const { data: colleges = [], refetch } = useQuery({
     queryKey: ['colleges'],
+
     queryFn: async () => {
       const res = await axios.get('http://localhost:5000/colleges')
 

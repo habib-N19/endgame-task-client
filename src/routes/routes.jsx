@@ -10,6 +10,7 @@ import MyCollege from '../pages/MyCollege/MyCollege'
 import MyProfile from '../pages/MyProfile/MyProfile'
 import ForgetPassword from '../pages/Authentication/ForgetPassword'
 import UserProfile from '../pages/UserProfile/UserProfile'
+import CollegeCard from '../pages/Colleges/CollegeCard'
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/colleges',
         element: <Colleges />
+      },
+      {
+        path: '/colleges/:id',
+        element: <CollegeCard />
       },
       {
         path: '/admission',
