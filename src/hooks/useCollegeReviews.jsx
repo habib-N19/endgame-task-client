@@ -5,7 +5,9 @@ const useCollegeReviews = () => {
   const { data: reviews = [], refetch } = useQuery({
     queryKey: 'reviews',
     queryFn: async () => {
-      const res = await axios.get('http://localhost:5000/rewviews')
+      const res = await axios.get(
+        'https://end-game-server-two.vercel.app/reviews'
+      )
       return res.data
     }
   })

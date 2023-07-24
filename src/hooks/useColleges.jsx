@@ -6,7 +6,9 @@ const useColleges = () => {
     queryKey: ['colleges'],
 
     queryFn: async () => {
-      const res = await axios.get('http://localhost:5000/colleges')
+      const res = await axios.get(
+        'https://end-game-server-two.vercel.app/colleges'
+      )
 
       return res.data
     }

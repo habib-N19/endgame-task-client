@@ -11,6 +11,7 @@ import MyProfile from '../pages/MyProfile/MyProfile'
 import ForgetPassword from '../pages/Authentication/ForgetPassword'
 import UserProfile from '../pages/UserProfile/UserProfile'
 import CollegeCard from '../pages/Colleges/CollegeCard'
+import PrivateRoute from './PrivateRoute'
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/colleges/:id',
-        element: <CollegeCard />
+        element: (
+          <PrivateRoute>
+            <CollegeCard />
+          </PrivateRoute>
+        )
       },
       {
         path: '/admission',
@@ -48,15 +53,27 @@ const router = createBrowserRouter([
       },
       {
         path: '/my_college',
-        element: <MyCollege />
+        element: (
+          <PrivateRoute>
+            <MyCollege />
+          </PrivateRoute>
+        )
       },
       {
         path: '/profile',
-        element: <MyProfile />
+        element: (
+          <PrivateRoute>
+            <MyProfile />
+          </PrivateRoute>
+        )
       },
       {
         path: '/user-profile',
-        element: <UserProfile />
+        element: (
+          <PrivateRoute>
+            <UserProfile />
+          </PrivateRoute>
+        )
       }
     ]
   }

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
 
@@ -12,19 +13,15 @@ const AdmissionForm = ({ college }) => {
   const onSubmit = data => {
     console.log(college)
     console.log(data)
-    // TODO:how to structure the data to send to server
-    // axios.post('http://localhost:5000/classes', data).then(data => {
-    //   if (data.data.insertedId) {
-    //     reset()
-    //     // Swal.fire({
-    //     //   position: 'top-end',
-    //     //   icon: 'success',
-    //     //   title: 'Class added for review',
-    //     //   showConfirmButton: false,
-    //     //   timer: 1500
-    //     // })
-    //   }
-    // })
+
+    axios
+      .post('https://end-game-server-two.vercel.app/submisson', data)
+      .then(data => {
+        if (data.data.insertedId) {
+          console.log(data)
+          reset()
+        }
+      })
   }
 
   return (

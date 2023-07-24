@@ -1,16 +1,10 @@
+import useColleges from '../../hooks/useColleges'
 import AdmissionForm from './AdmissionForm'
 
 const Admission = () => {
-  const colleges = [
-    { _id: '1', name: 'Harvard University' },
-    { _id: '2', name: 'Stanford University' },
-    { _id: '3', name: 'Massachusetts Institute of Technology (MIT)' },
-    { _id: '4', name: 'University of Oxford' },
-    { _id: '5', name: 'California Institute of Technology (Caltech)' },
-    { _id: '6', name: 'University of Cambridge' }
-  ]
+  const [colleges] = useColleges()
   return (
-    <div className='grid w-2/4 grid-cols-1 gap-2 mx-auto md:gap-3'>
+    <div className='grid w-2/4 grid-cols-1 gap-2 mx-auto mt-12 md:gap-3'>
       {colleges.map(college => (
         <>
           <label
@@ -18,13 +12,13 @@ const Admission = () => {
             htmlFor={college._id}
             className='text-lg font-semibold cursor-pointer'
           >
-            {college.name}
+            {college.college_name}
           </label>
           <input type='checkbox' id={college._id} className='modal-toggle' />
           <div className='modal'>
             <div className='w-3/4 mx-auto modal-box'>
               <h3 className='text-lg font-bold'>
-                College Name {college.name}!
+                College Name {college.college_name}!
               </h3>
               <AdmissionForm college={college} />
             </div>

@@ -11,7 +11,7 @@ const UpdateProfile = () => {
     // console.log(college)
     console.log(data)
     // TODO:how to structure the data to send to server
-    // axios.post('http://localhost:5000/classes', data).then(data => {
+    // axios.post('https://end-game-server-two.vercel.app/classes', data).then(data => {
     //   if (data.data.insertedId) {
     //     reset()
     //     // Swal.fire({

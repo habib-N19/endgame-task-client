@@ -9,7 +9,7 @@ const useMyColleges = () => {
     enabled: loading,
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:5000/submissions/email=${user?.email}`
+        `https://end-game-server-two.vercel.app/submissions/email=${user?.email}`
       )
       return res.data
     }

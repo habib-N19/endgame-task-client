@@ -19,7 +19,7 @@ const NavBar = () => {
       {user && (
         <>
           <li>
-            <NavLink to='/my-college'>My College</NavLink>
+            <NavLink to='/my_college'>My College</NavLink>
           </li>
         </>
       )}
