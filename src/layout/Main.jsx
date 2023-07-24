@@ -7,7 +7,7 @@ const Main = () => {
   const signUpPage = location.pathname === '/signup'
 
   return (
-    <div>
+    <div className='bg-base-10'>
       {!(logInPage || signUpPage) && <NavBar />}
       <Outlet></Outlet>
     </div>

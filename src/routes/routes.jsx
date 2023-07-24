@@ -9,6 +9,7 @@ import Admission from '../pages/Admission/Admission'
 import MyCollege from '../pages/MyCollege/MyCollege'
 import MyProfile from '../pages/MyProfile/MyProfile'
 import ForgetPassword from '../pages/Authentication/ForgetPassword'
+import UserProfile from '../pages/UserProfile/UserProfile'
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element: <MyProfile />
+      },
+      {
+        path: '/userProfile',
+        element: <UserProfile />
       }
     ]
   }

@@ -8,7 +8,7 @@ const SearchCollege = () => {
 
   return (
     <div className='w-full my-8 text-center'>
-      <di className='relative w-2/5 mx-auto border border-black join'>
+      <di className='relative w-2/5 mx-auto join'>
         {showInput ? (
           <>
             <input
