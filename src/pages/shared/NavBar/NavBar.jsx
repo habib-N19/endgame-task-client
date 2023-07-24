@@ -30,7 +30,7 @@ const NavBar = () => {
       <nav className='grid grid-cols-3 px-4 items-center justify-between w-full mb-2 h-[60px]  max-w-screen md:mb-6'>
         <div>
           {user && (
-            <button className='btn hover:btn-primary '>
+            <button className='rounded-full btn hover:btn-primary '>
               <NavLink to='/user-profile'>{user.displayName}</NavLink>
             </button>
           )}

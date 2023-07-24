@@ -12,12 +12,10 @@ const SearchCollege = () => {
         {showInput ? (
           <>
             <input
-              className='w-full input input-bordered join-item'
+              className='w-full rounded-full input input-bordered join-item'
               placeholder='Search for a college...'
             />
-            <button className='rounded-r-full w-fit btn join-item'>
-              Search
-            </button>
+            <button className='rounded-full w-fit btn join-item'>Search</button>
           </>
         ) : (
           <div
