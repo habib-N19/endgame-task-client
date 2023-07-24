@@ -7,15 +7,17 @@ const SearchCollege = () => {
   }
 
   return (
-    <div className='w-full my-8 text-center'>
-      <di className='relative w-2/5 mx-auto join'>
+    <div className='w-full mr-auto text-right'>
+      <di className='relative mx-auto join'>
         {showInput ? (
           <>
             <input
               className='w-full input input-bordered join-item'
               placeholder='Search for a college...'
             />
-            <button className='rounded-r-full btn join-item'>Search</button>
+            <button className='rounded-r-full w-fit btn join-item'>
+              Search
+            </button>
           </>
         ) : (
           <div

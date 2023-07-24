@@ -1,33 +1,46 @@
 import Headroom from 'react-headroom'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import useAuth from '../../../hooks/useAuth'
+import SearchCollege from '../../Home/SearchCollege/SearchCollege'
 
 const NavBar = () => {
+  const { user } = useAuth()
   const navItems = (
     <>
       <li>
-        <Link to='/'>Home</Link>
+        <NavLink to='/'>Home</NavLink>
       </li>
       <li>
-        <Link to='/colleges'>Colleges</Link>
+        <NavLink to='/colleges'>Colleges</NavLink>
       </li>
       <li>
-        <Link to='/admission'>Admission</Link>
+        <NavLink to='/admission'>Admission</NavLink>
       </li>
-      {
+      {user && (
         <>
           <li>
-            <Link to='/my-college'>My College</Link>
+            <NavLink to='/my-college'>My College</NavLink>
           </li>
         </>
-      }
+      )}
     </>
   )
   return (
     <Headroom>
-      <nav className='mb-2 md:mb-6'>
-        <ul className='flex justify-center px-6 py-3 mx-auto mt-5 font-semibold rounded-full shadow-lg w-fit md:gap-4'>
+      <nav className='grid grid-cols-3 px-4 items-center justify-between w-full mb-2 h-[60px]  max-w-screen md:mb-6'>
+        <div>
+          {user && (
+            <button className='btn hover:btn-primary '>
+              <NavLink to='/user-profile'>{user.displayName}</NavLink>
+            </button>
+          )}
+        </div>
+        <ul className='flex justify-center px-6 py-3 mx-auto font-semibold rounded-full shadow-lg glass md:gap-4 '>
           {navItems}
         </ul>
+        <div className='w-full ml-auto'>
+          <SearchCollege />
+        </div>
       </nav>
     </Headroom>
   )
